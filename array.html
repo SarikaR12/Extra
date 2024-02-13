@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [
+            {
+                name: "Watch",
+                color: "black",
+                price: "450",
+                available: "yes",
+            },
+            {
+                name: "makup",
+                color: "White",
+                price: "200",
+                available: "no",
+            },
+            {
+                name: "Footwear",
+                color: "Pink",
+                price: "150",
+                available: "yes",
+            },
+            {
+                name: "Baby-Cloth",
+                color: "Red",
+                price: "350",
+                available: "yes",
+            },
+            {
+                name: "Perfume",
+                color: "Lite",
+                price: "450",
+                available: "no",
+            },
+            {
+                name: "Bags",
+                color: "Grey",
+                price: "400",
+                available: "no",
+            },
+            {
+                name: "Mobile",
+                color: "Rose-Gold",
+                price: "350",
+                available: "yes",
+            },
+            {
+                name: "Grocery",
+                color: "Yellow",
+                price: "500",
+                available: "yes",
+            },
+            {
+                name: "Books",
+                color: "White",
+                price: "100",
+                available: "no",
+            },
+            {
+                name: "Sports",
+                color: "Blue",
+                price: "200",
+                available: "yes",
+            },
+        ];
+        console.log(arr);
+        let result = arr.filter((val) => val.available === "yes" && val.price >= 200 && val.price <= 400)
+        console.log(result);
+        
+    </script>
+</body>
+
+</html>
