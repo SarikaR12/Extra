@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="name" placeholder="Enter your name" /><br><br>
+    <input type="password" id="pass" placeholder="Enter your password"/><br><br>
+
+    <button onclick="submit()">submit</button>
+    <h1 id="title"></h1>
+
+    <script>
+        function submit() {
+            let name = document.getElementById("name").value;
+            let pass = document.getElementById("pass").value;
+
+            let user = "sarika";
+            let password = 1234;
+
+            if (name == user && pass == password) {
+                document.getElementById("title").innerHTML = "your data add successful !";
+                document.getElementById("title").style.color = "green";
+            } else if (name == "" && pass == "") {
+                document.getElementById("title").innerHTML = "please enter Name & password";
+            } else if (name != user && pass != password) {
+                document.getElementById("title").innerHTML = "please Enter valid username & password";
+                document.getElementById("title").style.color = "red";
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
