@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>title</td>
+            </tr>
+        </thead>
+        <tbody id="body"></tbody>
+    </table>
+
+
+    <script>
+        // using async await
+
+        // let tbody = document.getElementById("body");
+
+        // let addData = async () => {
+        //     let res = await fetch('https://fakestoreapi.com/products');
+        //     let result = await res.json();
+        //     console.log(result, "api 1");
+
+        //     result.map((val, ind) => {
+        //         let tr = document.createElement("tr");
+        //         tr.innerHTML = `
+        //           <td>${val.id}</td>
+        //           <td>${val.title}</td>
+        //             `;
+        //         tbody.appendChild(tr);
+        //     });
+        // };
+        // addData();
+
+
+
+        // let tbody = document.getElementById("body");
+
+        // let addData = async () => {
+        //     let res = await fetch('https://fakestoreapi.com/products/category/jewelery');
+        //     let result = await res.json();
+        //     console.log(result, "api 2");
+
+        //     result.map((val, ind) => {
+        //         let tr = document.createElement("tr");
+        //         tr.innerHTML = `
+        //           <td>${val.id}</td>
+        //           <td>${val.title}</td>
+        //             `;
+        //         tbody.appendChild(tr);
+        //     });
+        // };
+
+        // addData();
+
+
+        // let tbody = document.getElementById("body");
+
+        // let addData = async () => {
+        //     let res = await fetch(' https://api.escuelajs.co/api/v1/products/');
+        //     let result = await res.json();
+        //     console.log(result, "api 3");
+
+        //     result.map((val, ind) => {
+        //         let tr = document.createElement("tr");
+        //         tr.innerHTML = `
+        //   <td>${val.id}</td>
+        //   <td>${val.title}</td>
+        //     `;
+        //         tbody.appendChild(tr);
+        //     });
+        // };
+
+        // addData();
+
+
+
+        let tbody = document.getElementById("body");
+
+        let addData = async () => {
+            let res = fetch('https://fakestoreapi.com/products');
+            let result = await res.json();
+            console.log(result, "api 4");
+
+            result.map((val, ind) => {
+                let tr = document.createElement("tr");
+                tr.innerHTML = `
+          <td>${val.id}</td>
+          <td>${val.title}</td>
+            `;
+                tbody.appendChild(tr);
+            });
+        };
+
+        addData();
+
+        
+
+    </script>
+
+
+</body>
+
+</html>
